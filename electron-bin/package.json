@@ -1,5 +1,5 @@
 {
-  "name": "@turbowarp/packager-electron-bin",
+  "name": "@caellab/scratchpackager-electron-bin",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

@@ -3,7 +3,7 @@
 ## Installing
 
 ```bash
-npm install --save-exact @turbowarp/packager
+npm install --save-exact @caellab/scratchpackager
 ```
 
 We suggest that you use `--save-exact` (or, with yarn, `--exact`) to make sure you always install the same version. This is important because we don't promise API compatibility across even minor updates.
@@ -34,7 +34,7 @@ The Node.js module as published on npm is not intended to work in a browser rega
 
 Large assets such as Electron binaries are not stored in this repository and will be downloaded from a remote server on demand. While we aren't actively removing old files, we can't promise they will exist forever. Downloads are validated with a SHA-256 checksum and cached locally.
 
-Large assets are cached in `node_modules/@turbowarp/packager/.packager-cache`. You may want to periodically clean this folder.
+Large assets are cached in `node_modules/@caellab/scratchpackager/.packager-cache`. You may want to periodically clean this folder.
 
 ## Using the API
 
@@ -43,7 +43,7 @@ See demo.js or demo-simple.js for a full example.
 First, you can import the module like this:
 
 ```js
-const Packager = require('@turbowarp/packager');
+const Packager = require('@caellab/scratchpackager');
 ```
 
 ### Load a project

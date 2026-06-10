@@ -55,10 +55,10 @@ You can only load one version of Scaffolding on a page, but you can create as ma
 
 ```html
 <!-- for scaffolding-min: -->
-<script src="https://cdn.jsdelivr.net/npm/@turbowarp/packager@0.0.0/dist/scaffolding/scaffolding-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@caellab/scratchpackager@0.0.0/dist/scaffolding/scaffolding-min.js"></script>
 
 <!-- for scaffolding-full -->
-<script src="https://cdn.jsdelivr.net/npm/@turbowarp/packager@0.0.0/dist/scaffolding/scaffolding-full.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@caellab/scratchpackager@0.0.0/dist/scaffolding/scaffolding-full.js"></script>
 ```
 
 Replace `0.0.0` with the latest release from https://github.com/TurboWarp/packager/releases, for example `1.0.0`.
@@ -70,20 +70,20 @@ If you don't want to use a CDN, you can download the JS file linked by the scrip
 ### From npm
 
 ```bash
-npm install --save-exact @turbowarp/packager
+npm install --save-exact @caellab/scratchpackager
 ```
 
 ```js
 // for scaffolding-min:
-require('@turbowarp/packager/dist/scaffolding/scaffolding-min.js');
+require('@caellab/scratchpackager/dist/scaffolding/scaffolding-min.js');
 // for scaffolding-full:
-require('@turbowarp/packager/dist/scaffolding/scaffolding-full.js');
+require('@caellab/scratchpackager/dist/scaffolding/scaffolding-full.js');
 
 // or, if you prefer ES6 imports,
 // for scaffolding-min:
-import '@turbowarp/packager/dist/scaffolding/scaffolding-min.js';
+import '@caellab/scratchpackager/dist/scaffolding/scaffolding-min.js';
 // for scaffolding-full:
-import '@turbowarp/packager/dist/scaffolding/scaffolding-full.js';
+import '@caellab/scratchpackager/dist/scaffolding/scaffolding-full.js';
 ```
 
 Note that regardless of how you import Scaffolding, it is exported on `window.Scaffolding`, not on the module. This is strange and weird; it may change in the future.

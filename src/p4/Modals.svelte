@@ -127,8 +127,8 @@
             message={$_('select.unsharedProjectsMore')}
             values={{
               link: {
-                text: 'https://docs.turbowarp.org/unshared-projects',
-                href: 'https://docs.turbowarp.org/unshared-projects',
+                text: 'https://forum.xmuer.online/d/229',
+                href: 'https://forum.xmuer.online/d/229',
                 newTab: true
               }
             }}

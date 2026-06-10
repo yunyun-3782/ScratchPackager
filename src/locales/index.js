@@ -1,5 +1,4 @@
-import {derived} from 'svelte/store';
-import writablePersistentStore from '../p4/persistent-store';
+import {derived, writable} from 'svelte/store';
 import englishMessages from '!../build/unstructure-translations-loader!./en.json';
 import localeNames from './locale-names.json';
 
@@ -33,13 +32,71 @@ const allMessages = {
   /*===*/
 };
 
-const KNOWN_GOOD_LANGUAGES = ['en', 'es', 'ja', 'nl', 'it', 'sl'];
-const getInitialLocale = () => [
-  navigator.language.toLowerCase(),
-  navigator.language.toLowerCase().split('-')[0]
-].find(i => KNOWN_GOOD_LANGUAGES.includes(i) && allMessages[i]) || 'en';
+// BCP47代码到内部代码的映射
+const bcp47ToInternal = {
+  'en-US': 'en',
+  'ca-ES': 'ca',
+  'cs-CZ': 'cs',
+  'de-DE': 'de',
+  'es-ES': 'es',
+  'fi-FI': 'fi',
+  'fr-FR': 'fr',
+  'hu-HU': 'hu',
+  'it-IT': 'it',
+  'ja-JP': 'ja',
+  'ko-KR': 'ko',
+  'lt-LT': 'lt',
+  'nb-NO': 'nb',
+  'nl-NL': 'nl',
+  'pl-PL': 'pl',
+  'pt-PT': 'pt',
+  'pt-BR': 'pt-br',
+  'ru-RU': 'ru',
+  'sl-SI': 'sl',
+  'sv-SE': 'sv',
+  'tr-TR': 'tr',
+  'uk-UA': 'uk',
+  'zh-CN': 'zh-cn',
+  'zh-TW': 'zh-tw'
+};
 
-const locale = writablePersistentStore('P4.locale', getInitialLocale());
+// 从URL中获取语言代码
+const getLocaleFromURL = () => {
+  const path = window.location.pathname;
+  const match = path.match(/\/tool\/scratchpackager\/([a-z]{2}-[A-Z]{2})\//);
+  if (match) {
+    const bcp47Code = match[1];
+    const internalCode = bcp47ToInternal[bcp47Code];
+    if (internalCode && allMessages[internalCode]) {
+      return internalCode;
+    }
+  }
+  return null;
+};
+
+// 完全从URL读取语言，不使用localStorage
+const getInitialLocale = () => {
+  const urlLocale = getLocaleFromURL();
+  if (urlLocale) {
+    return urlLocale;
+  }
+  // 如果URL中没有语言，使用浏览器语言
+  const browserLang = navigator.language.toLowerCase();
+  const browserLangShort = browserLang.split('-')[0];
+  // 尝试匹配完整的浏览器语言代码
+  const matchFull = Object.entries(bcp47ToInternal).find(([k]) => k.toLowerCase() === browserLang);
+  if (matchFull && allMessages[matchFull[1]]) {
+    return matchFull[1];
+  }
+  // 尝试匹配语言代码的前缀
+  const matchShort = Object.entries(bcp47ToInternal).find(([k]) => k.toLowerCase().startsWith(browserLangShort));
+  if (matchShort && allMessages[matchShort[1]]) {
+    return matchShort[1];
+  }
+  return 'en';
+};
+
+const locale = writable(getInitialLocale());
 locale.subscribe((lang) => {
   if (!allMessages[lang]) {
     locale.set('en');

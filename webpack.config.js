@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const AddBuildIDToOutputPlugin = require('./src/build/add-build-id-to-output-plugin');
 const GenerateServiceWorkerPlugin = require('./src/build/generate-service-worker-plugin');
 const EagerDynamicImportPlugin = require('./src/build/eager-dynamic-import-plugin');
+const { getSupportedLocales, BASE_PATH } = require('./src/build/locales-config');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isStandalone = !!process.env.STANDALONE;
@@ -132,6 +133,7 @@ const makeWebsite = () => ({
   ...base,
   devtool: isStandalone ? '' : 'source-map',
   output: {
+    publicPath: '/tool/scratchpackager/',
     filename: isProduction ? 'js/[name].[contenthash].js' : 'js/[name].js',
     path: dist
   },
@@ -184,10 +186,27 @@ const makeWebsite = () => ({
       'process.env.STANDALONE': JSON.stringify(isStandalone ? true : false),
       'process.env.VERSION': JSON.stringify(version),
     }),
+    // 为每种语言生成一个HTML文件
+    ...getSupportedLocales().map(locale => 
+      new HtmlWebpackPlugin({
+        filename: `${locale}/index.html`,
+        template: './src/p4/template.ejs',
+        chunks: ['p4'],
+        templateParameters: {
+          currentLocale: locale,
+          supportedLocales: getSupportedLocales().map(code => ({ code }))
+        }
+      })
+    ),
+    // 根目录的index.html重定向到默认语言(英文)
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/p4/template.ejs',
-      chunks: ['p4']
+      chunks: ['p4'],
+      templateParameters: {
+        currentLocale: 'en-US',
+        supportedLocales: getSupportedLocales().map(code => ({ code }))
+      }
     }),
     new GenerateServiceWorkerPlugin(),
     ...(isStandalone ? [new EagerDynamicImportPlugin()] : []),
@@ -199,7 +218,12 @@ const makeWebsite = () => ({
     overlay: true,
     inline: false,
     host: '0.0.0.0',
-    port: 8947
+    port: 8947,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/tool\/scratchpackager\/[a-z]{2}-[A-Z]{2}\/.*$/, to: '/tool/scratchpackager/index.html' }
+      ]
+    }
   },
 });
 

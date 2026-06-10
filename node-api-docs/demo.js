@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('cross-fetch').default;
 
-// You should use require('@turbowarp/packager') instead
+// You should use require('@caellab/scratchpackager') instead
 // We use a strange require() in this demo because we use this to test the API internally
 const Packager = require('../dist/packager');
 

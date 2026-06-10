@@ -143,33 +143,6 @@
         </p>
       {/if}
       <p>{$_('p4.description1')}</p>
-      <p>
-        <ComplexMessage
-          message={$_('p4.description2')}
-          values={{
-            embedding: {
-              text: $_('p4.description2-embedding'),
-              href: 'https://docs.turbowarp.org/embedding'
-            }
-          }}
-        />
-      </p>
-      <p>
-        <ComplexMessage
-          message={$_('p4.description3')}
-          values={{
-            // These placeholders are named this way for legacy reasons.
-            onScratch: {
-              text: $_('p4.description3-on').replace('{brand}', FEEDBACK_PRIMARY.name),
-              href: FEEDBACK_PRIMARY.link
-            },
-            onGitHub: {
-              text: $_('p4.description3-on').replace('{brand}', FEEDBACK_SECONDARY.name),
-              href: FEEDBACK_SECONDARY.link
-            }
-          }}
-        />
-      </p>
       <p class="disclaimer">
         {$_('p4.disclaimer')}
       </p>
