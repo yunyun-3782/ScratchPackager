@@ -117,6 +117,7 @@
         "disclaimer": "TurboWarp nie jest powiązany ze Scratch, Scratch Team, ani Scratch Foundation.",
         "documentation": "Dodatkowe treści i pomoc",
         "donate": "Wesprzyj",
+        "attribution": "CaelLabScratchPackager jest pochodną TurboWarp Packager. Szczera wdzięczność dla zespołu TurboWarp Packager.",
         "error": "Błąd",
         "errorMessage": "Wiadomość: {error}",
         "feedback": "Opinia Zwrotna",

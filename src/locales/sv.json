@@ -140,6 +140,7 @@
         "disclaimer": "Denna sida är inte ansluten med Scratch, Scratch teamet eller Scratchstiftelsen.",
         "documentation": "Ytterligare resurser och hjälp",
         "donate": "Donera",
+        "attribution": "CaelLabScratchPackager är härlett från TurboWarp Packager. Ärlig tacksamhet till TurboWarp Packager teamet.",
         "error": "Fel",
         "errorMessage": "Meddelande: {error}",
         "feedback": "Respons",

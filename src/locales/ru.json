@@ -161,6 +161,7 @@
         "disclaimer": "Этот сайт не связан со Scratch, Командой Scratch или Фондом Scratch.",
         "documentation": "Дополнительные ресурсы и помощь",
         "donate": "Пожертвовать",
+        "attribution": "CaelLabScratchPackager создан на основе TurboWarp Packager. Искренняя благодарность команде TurboWarp Packager.",
         "error": "Ошибка",
         "errorMessage": "Сообщение: {error}",
         "feedback": "Обратная связь",

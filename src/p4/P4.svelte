@@ -119,6 +119,12 @@
   .disclaimer {
     font-style: italic;
   }
+  .attribution {
+    font-size: small;
+    opacity: 0.7;
+    margin-top: 8px;
+    font-style: italic;
+  }
   .version {
     font-size: small;
     opacity: 0.8;
@@ -209,7 +215,7 @@
       {/if}
     </div>
     <div>
-      <a href="https://docs.turbowarp.org/packager">{$_('p4.documentation')}</a>
+      <a href="https://www.caellab.com/">{$_('p4.documentation')}</a>
     </div>
     <div>
       <SelectTheme />
@@ -217,5 +223,8 @@
     <div>
       <SelectLocale />
     </div>
+    <p class="attribution">
+      {$_('p4.attribution')}
+    </p>
   </footer>
 </main>

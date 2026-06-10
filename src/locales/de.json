@@ -158,6 +158,7 @@
         "disclaimer": "Diese Seite ist nicht mit Scratch, dem Scratch Team oder der Scratch-Stiftung verbunden.",
         "documentation": "Zusätzliche Ressourcen und Hilfe",
         "donate": "Spenden",
+        "attribution": "CaelLabScratchPackager basiert auf TurboWarp Packager. Herzlichen Dank an das TurboWarp Packager Team.",
         "error": "Fehler",
         "errorMessage": "Nachricht: {error}",
         "importingInterface": "Einstellungen werden geladen...",

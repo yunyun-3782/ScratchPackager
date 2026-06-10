@@ -127,6 +127,7 @@
         "disclaimer": "Ta spletna stran ni povezana s Scratchem, skupino Scratch ali fundacijo Scratch.",
         "documentation": "Dodatno gradivo in pomoč",
         "donate": "Prispevaj",
+        "attribution": "CaelLabScratchPackager izhaja iz TurboWarp Packager. Iskrena hvala ekipi TurboWarp Packager.",
         "error": "Napaka",
         "errorMessage": "Sporočilo: {error}",
         "feedback": "Povratne informacije",

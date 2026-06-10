@@ -108,6 +108,7 @@
         "disclaimer": "Ce site n'est pas affilié à Scratch, à la Scratch Team, ou à la Scratch Foundation.",
         "documentation": "Ressources et aide supplémentaires",
         "donate": "Faire un don",
+        "attribution": "CaelLabScratchPackager est dérivé de TurboWarp Packager. Sincères remerciements à l'équipe TurboWarp Packager.",
         "error": "Erreur",
         "errorMessage": "Message : {error}",
         "feedback": "Envoyer des commentaires",

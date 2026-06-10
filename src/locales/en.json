@@ -80,6 +80,9 @@
       "string": "Donate",
       "developer_comment": "Link to donation page"
     },
+    "attribution": {
+      "string": "CaelLabScratchPackager is derived from TurboWarp Packager. Sincere gratitude to the TurboWarp Packager team."
+    },
     "documentation": {
       "string": "Additional resources and help",
       "developer_comment": "Link to a place with additional information describing advanced topics"

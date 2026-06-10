@@ -106,6 +106,7 @@
         "description3": "Relate bugs, dê feedback e sugira ideias {onScratch} ou {onGitHub}.",
         "description3-on": "no {brand}",
         "documentation": "Recursos e ajuda adicionais",
+        "attribution": "CaelLabScratchPackager é derivado do TurboWarp Packager. Sincera gratidão à equipe do TurboWarp Packager.",
         "error": "Erro",
         "errorMessage": "Mensagem: {error}",
         "privacy": "Política de Privacidade",

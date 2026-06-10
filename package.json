@@ -18,17 +18,17 @@
     "postpublish": "node src/build/nodejs/update-readme.js restore"
   },
   "author": "GarboMuffin",
-  "homepage": "https://github.com/TurboWarp/packager#readme",
+  "homepage": "https://github.com/yunyun-3782/ScratchPackager#readme",
   "keywords": [
     "scratch",
     "packager"
   ],
   "bugs": {
-    "url": "https://github.com/TurboWarp/packager/issues"
+    "url": "https://github.com/yunyun-3782/ScratchPackager/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TurboWarp/packager.git"
+    "url": "git+https://github.com/yunyun-3782/ScratchPackager.git"
   },
   "license": "MPL-2.0",
   "dependencies": {

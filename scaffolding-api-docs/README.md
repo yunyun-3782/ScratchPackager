@@ -61,7 +61,7 @@ You can only load one version of Scaffolding on a page, but you can create as ma
 <script src="https://cdn.jsdelivr.net/npm/@caellab/scratchpackager@0.0.0/dist/scaffolding/scaffolding-full.js"></script>
 ```
 
-Replace `0.0.0` with the latest release from https://github.com/TurboWarp/packager/releases, for example `1.0.0`.
+Replace `0.0.0` with the latest release from https://github.com/yunyun-3782/ScratchPackager/releases, for example `1.0.0`.
 
 DO NOT use versions like `@1` or `@latest` -- your website will break if (when) Scaffolding's API changes!
 

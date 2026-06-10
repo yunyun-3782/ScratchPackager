@@ -145,6 +145,7 @@
         "disclaimer": "Bu site Scratch, Scratch Takımı veya Vakfı tarafından desteklenmemektedir.",
         "documentation": "Ek kaynaklar ve yardım",
         "donate": "Bağış Yapın",
+        "attribution": "CaelLabScratchPackager, TurboWarp Packager'dan türetilmiştir. TurboWarp Packager ekibine içten teşekkürler.",
         "error": "Hata",
         "errorMessage": "Mesaj: {error}",
         "feedback": "Geribildirim",

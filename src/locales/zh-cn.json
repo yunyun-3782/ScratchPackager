@@ -160,6 +160,7 @@
         "disclaimer": "此网站不属于 Scratch、Scratch 团队或 Scratch 基金会。",
         "documentation": "更多资源和帮助",
         "donate": "捐赠",
+        "attribution": "CaelLabScratchPackager 衍生自 TurboWarp Packager，向 TurboWarp Packager 团队致以最诚挚的感谢。",
         "error": "错误",
         "errorMessage": "信息：{error}",
         "feedback": "反馈",

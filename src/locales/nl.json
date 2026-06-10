@@ -158,6 +158,7 @@
         "disclaimer": "Deze site is niet aangesloten bij Scratch, het Scratch-Team, of de Scratch-organisatie.",
         "documentation": "Aanvullende bronnen en hulp",
         "donate": "Doneren",
+        "attribution": "CaelLabScratchPackager is afgeleid van TurboWarp Packager. Oprechte dank aan het TurboWarp Packager team.",
         "error": "Fout",
         "errorMessage": "Bericht: {error}",
         "importingInterface": "Bezig met opties laden...",

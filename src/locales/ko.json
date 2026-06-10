@@ -160,6 +160,7 @@
         "disclaimer": "해당 사이트는 Scratch, 스크래치 팀 또는 스크래치 재단과 제휴를 맺지 않았습니다.",
         "documentation": "추가적인 리소스와 도움말",
         "donate": "기부하기",
+        "attribution": "CaelLabScratchPackager는 TurboWarp Packager에서 파생되었습니다. TurboWarp Packager 팀에 진심으로 감사드립니다.",
         "error": "오류",
         "errorMessage": "메시지: {error}",
         "feedback": "문의하기",

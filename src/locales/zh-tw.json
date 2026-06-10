@@ -93,6 +93,7 @@
         "error": "錯誤",
         "errorMessage": "訊息：{error}",
         "feedback": "回饋",
+        "attribution": "CaelLabScratchPackager 衍生自 TurboWarp Packager，向 TurboWarp Packager 團隊致以最誠摯的感謝。",
         "privacy": "隱私權政策",
         "refresh": "重新整理",
         "reportBug": "回報錯誤",

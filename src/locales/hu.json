@@ -131,6 +131,7 @@
         "disclaimer": "Ez az oldal nincs jogi kapcsolatban a Scratch-vel, a Scratch Csapattal, vagy a Scratch Alapítvánnyal.",
         "documentation": "Kiegészítő anyagok és segítség",
         "donate": "Adományozz",
+        "attribution": "A CaelLabScratchPackager a TurboWarp Packager-ből származik. Őszinte köszönet a TurboWarp Packager csapatának.",
         "error": "Hiba",
         "errorMessage": "Üzenet: {error}",
         "feedback": "Visszajelzés",

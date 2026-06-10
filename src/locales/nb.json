@@ -146,6 +146,7 @@
         "disclaimer": "Dette nettstedet er ikke tilknyttet Scratch, Scratch Team eller Scratch Foundation.",
         "documentation": "Tilleggsressurser og hjelp",
         "donate": "Doner",
+        "attribution": "CaelLabScratchPackager er avledet fra TurboWarp Packager. Oppriktig takknemlighet til TurboWarp Packager teamet.",
         "error": "Feil",
         "errorMessage": "Melding: {error}",
         "feedback": "Tilbakemelding",

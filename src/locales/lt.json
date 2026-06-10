@@ -122,6 +122,7 @@
         "disclaimer": "Ši svetainė nėra susieta su Scratch, the Scratch Team ar su the Scratch Foundation.",
         "documentation": "Papildomi ištekliai bei pagalba",
         "donate": "Paaukoti",
+        "attribution": "CaelLabScratchPackager yra kilęs iš TurboWarp Packager. Nuoširdi padėka TurboWarp Packager komandai.",
         "error": "Klaida",
         "errorMessage": "Žinutė: {error}",
         "feedback": "Atsiliepimas",

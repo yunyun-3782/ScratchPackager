@@ -14,7 +14,7 @@ We suggest that you use `--save-exact` (or, with yarn, `--exact`) to make sure y
 
 The Node.js API is still in beta.
 
-There are no promises of API stability between updates even across minor updates. Always pin to an exact version and don't update without testing. We don't go out of our way to break the API, but we don't let it stop us from making changes. We try to mention noteworthy changes in the [GitHub releases](https://github.com/TurboWarp/packager/releases) changelog.
+There are no promises of API stability between updates even across minor updates. Always pin to an exact version and don't update without testing. We don't go out of our way to break the API, but we don't let it stop us from making changes. We try to mention noteworthy changes in the [GitHub releases](https://github.com/yunyun-3782/ScratchPackager/releases) changelog.
 
 ### Release cadence
 
