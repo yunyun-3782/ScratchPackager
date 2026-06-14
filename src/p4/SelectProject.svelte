@@ -15,7 +15,7 @@
   import Task from './task';
   import importExternalProject from './import-external-project';
 
-  const defaultProjectId = '60917032';
+  const defaultProjectId = 'example_caellab.com';
 
   const type = writablePersistentStore('SelectProject.type', 'id');
   const projectId = writablePersistentStore('SelectProject.id', defaultProjectId);

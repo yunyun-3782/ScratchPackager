@@ -1,4 +1,5 @@
 <script>
+  import {onMount} from 'svelte';
   import {locale, localeNames} from '../locales/index';
   
   // 语言代码映射：项目内部代码 -> BCP47代码
@@ -47,6 +48,19 @@
   
   // 当前语言从URL读取
   let currentLocale = getCurrentLocaleFromURL();
+  let container;
+  
+  // JS加载后，隐藏链接列表，显示下拉框
+  onMount(() => {
+    if (container) {
+      const linksDiv = container.querySelector('.locale-links');
+      const selectEl = container.querySelector('select');
+      if (linksDiv && selectEl) {
+        linksDiv.style.display = 'none';
+        selectEl.style.display = 'block';
+      }
+    }
+  });
   
   function handleLocaleChange(event) {
     const newLocale = event.target.value;
@@ -56,10 +70,58 @@
     // 使用JS跳转到新语言的URL
     window.location.href = newURL;
   }
+  
+  // 生成语言链接URL
+  function getLocaleURL(loc) {
+    const bcp47Code = localeToBCP47[loc] || loc;
+    return `${BASE_PATH}/${bcp47Code}/`;
+  }
 </script>
 
-<select value={currentLocale} on:change={handleLocaleChange}>
-  {#each Object.entries(localeNames) as [loc, name]}
-    <option value={loc}>{name || loc}</option>
-  {/each}
-</select>
+<div bind:this={container}>
+  <!-- 无JS时显示超链接列表，搜索引擎可抓取 -->
+  <div class="locale-links" aria-label="Select Language">
+    {#each Object.entries(localeNames) as [loc, name]}
+      <a href={getLocaleURL(loc)} hreflang={localeToBCP47[loc] || loc} 
+         class:active={loc === currentLocale} title={name || loc}>
+        {name || loc}
+      </a>
+    {/each}
+  </div>
+
+  <!-- JS加载后会显示下拉框 -->
+  <select value={currentLocale} on:change={handleLocaleChange} style="display:none">
+    {#each Object.entries(localeNames) as [loc, name]}
+      <option value={loc}>{name || loc}</option>
+    {/each}
+  </select>
+</div>
+
+<style>
+  .locale-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .locale-links a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .locale-links a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    text-decoration: underline;
+  }
+  
+  .locale-links a.active {
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.15);
+  }
+</style>

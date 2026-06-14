@@ -24,34 +24,34 @@
       })();
     </script>
     <% } %>
-    <% /* 多语言标题和描述 */ %>
+    <% /* 多语言标题和描述 - 使用BCP47代码 */ %>
     <% const seoTranslations = {
-      'en': { title: APP_NAME + ' - Convert Scratch projects to HTML, EXE, and more', desc: 'Converts Scratch 3, 2, or 1 projects into HTML files, zip archives, or executable programs for Windows, macOS, and Linux. Faster and more customizable than HTMLifier and forkphorus.' },
-      'ca': { title: APP_NAME + ' - Converteix projectes de Scratch a HTML, EXE i més', desc: 'Converteix projectes de Scratch 3, 2 o 1 en fitxers HTML, arxius zip o programes executables per a Windows, macOS i Linux.' },
-      'cs': { title: APP_NAME + ' - Převeďte Scratch projekty na HTML, EXE a další', desc: 'Převádí Scratch 3, 2 nebo 1 projekty do souborů HTML, archivů ZIP nebo spustitelných programů pro Windows, macOS a Linux.' },
-      'de': { title: APP_NAME + ' - Scratch-Projekte in HTML, EXE und mehr konvertieren', desc: 'Konvertiert Scratch 3, 2 oder 1 Projekte in HTML-Dateien, ZIP-Archive oder ausführbare Programme für Windows, macOS und Linux.' },
-      'es': { title: APP_NAME + ' - Convierte proyectos de Scratch a HTML, EXE y más', desc: 'Convierte proyectos de Scratch 3, 2 o 1 en archivos HTML, archivos zip o programas ejecutables para Windows, macOS y Linux.' },
-      'fi': { title: APP_NAME + ' - Muunna Scratch-projektit HTML-tiedostoiksi, EXE:ksi ja muuksi', desc: 'Muuntaa Scratch 3, 2 tai 1 projektit HTML-tiedostoiksi, ZIP-arkistoiksi tai ohjelmatiedostoiksi Windows, macOS ja Linuxille.' },
-      'fr': { title: APP_NAME + ' - Convertir des projets Scratch en HTML, EXE et plus', desc: 'Convertit les projets Scratch 3, 2 ou 1 en fichiers HTML, archives zip ou programmes exécutables pour Windows, macOS et Linux.' },
-      'hu': { title: APP_NAME + ' - Alakítsd Scratch projekteket HTML, EXE és egyebekké', desc: 'A Scratch 3, 2 vagy 1 projekteket HTML fájlokká, ZIP archívumokká vagy Windows, macOS és Linux futtatható programokká alakítja.' },
-      'it': { title: APP_NAME + ' - Converti progetti Scratch in HTML, EXE e altro', desc: 'Converte progetti Scratch 3, 2 o 1 in file HTML, archivi zip o programmi eseguibili per Windows, macOS e Linux.' },
-      'ja': { title: APP_NAME + ' - ScratchプロジェクトをHTML、EXEなどに変換', desc: 'Scratch 3、2、1のプロジェクトをHTMLファイル、ZIPアーカイブ、またはWindows、macOS、Linux用の実行可能プログラムに変換します。' },
-      'ko': { title: APP_NAME + ' - Scratch 프로젝트를 HTML, EXE 등으로 변환', desc: 'Scratch 3, 2 또는 1 프로젝트를 HTML 파일, ZIP 아카이브 또는 Windows, macOS, Linux용 실행 가능한 프로그램으로 변환합니다.' },
-      'lt': { title: APP_NAME + ' - Konvertuokite Scratch projektus į HTML, EXE ir daugiau', desc: 'Konvertuoja Scratch 3, 2 arba 1 projektus į HTML failus, ZIP archyvus arba vykdomas programas skirtas Windows, macOS ir Linux.' },
-      'nb': { title: APP_NAME + ' - Konverter Scratch-prosjekter til HTML, EXE og mer', desc: 'Konverterer Scratch 3, 2 eller 1 prosjekter til HTML-filer, ZIP-arkiver eller kjørbare programmer for Windows, macOS og Linux.' },
-      'nl': { title: APP_NAME + ' - Converteer Scratch-projecten naar HTML, EXE en meer', desc: 'Converteert Scratch 3, 2 of 1 projecten naar HTML-bestanden, ZIP-archieven of uitvoerbare programma\'s voor Windows, macOS en Linux.' },
-      'pl': { title: APP_NAME + ' - Konwertuj projekty Scratch na HTML, EXE i więcej', desc: 'Konwertuje projekty Scratch 3, 2 lub 1 na pliki HTML, archiwa ZIP lub programy wykonalne dla Windows, macOS i Linux.' },
-      'pt': { title: APP_NAME + ' - Converta projetos do Scratch em HTML, EXE e mais', desc: 'Converte projetos do Scratch 3, 2 ou 1 em arquivos HTML, arquivos zip ou programas executáveis para Windows, macOS e Linux.' },
-      'pt-br': { title: APP_NAME + ' - Converta projetos do Scratch em HTML, EXE e mais', desc: 'Converte projetos do Scratch 3, 2 ou 1 em arquivos HTML, arquivos zip ou programas executáveis para Windows, macOS e Linux.' },
-      'ru': { title: APP_NAME + ' - Конвертируйте проекты Scratch в HTML, EXE и не только', desc: 'Преобразует проекты Scratch 3, 2 или 1 в HTML-файлы, ZIP-архивы или исполняемые программы для Windows, macOS и Linux.' },
-      'sl': { title: APP_NAME + ' - Pretvorite Scratch projekte v HTML, EXE in več', desc: 'Pretvori Scratch 3, 2 ali 1 projekte v HTML datoteke, ZIP arhive ali izvedljive programe za Windows, macOS in Linux.' },
-      'sv': { title: APP_NAME + ' - Konvertera Scratch-projekt till HTML, EXE och mer', desc: 'Konverterar Scratch 3, 2 eller 1 projekt till HTML-filer, ZIP-arkiv eller körbara program för Windows, macOS och Linux.' },
-      'tr': { title: APP_NAME + ' - Scratch projelerini HTML, EXE ve daha fazlasına dönüştür', desc: 'Scratch 3, 2 veya 1 projelerini HTML dosyaları, ZIP arşivleri veya Windows, macOS ve Linux için çalıştırılabilir programlara dönüştürür.' },
-      'uk': { title: APP_NAME + ' - Конвертуйте проекти Scratch в HTML, EXE та інше', desc: 'Перетворює проекти Scratch 3, 2 або 1 у HTML-файли, ZIP-архіви або виконувані програми для Windows, macOS та Linux.' },
-      'zh-cn': { title: APP_NAME + ' - 将Scratch项目转换为HTML、EXE等格式', desc: '将Scratch 3、2或1项目转换为HTML文件、ZIP压缩包或适用于Windows、macOS和Linux的可执行程序。比HTMLifier和forkphorus更快更易定制。' },
-      'zh-tw': { title: APP_NAME + ' - 將Scratch專案轉換為HTML、EXE等格式', desc: '將Scratch 3、2或1專案轉換為HTML檔案、ZIP壓縮檔或適用於Windows、macOS和Linux的可執行程式。' }
+      'en-US': { title: APP_NAME + ' - Convert Scratch projects to HTML, EXE, and more', desc: 'Converts Scratch 3, 2, or 1 projects into HTML files, zip archives, or executable programs for Windows, macOS, and Linux. Faster and more customizable than HTMLifier and forkphorus.' },
+      'ca-ES': { title: APP_NAME + ' - Converteix projectes de Scratch a HTML, EXE i més', desc: 'Converteix projectes de Scratch 3, 2 o 1 en fitxers HTML, arxius zip o programes executables per a Windows, macOS i Linux.' },
+      'cs-CZ': { title: APP_NAME + ' - Převeďte Scratch projekty na HTML, EXE a další', desc: 'Převádí Scratch 3, 2 nebo 1 projekty do souborů HTML, archivů ZIP nebo spustitelných programů pro Windows, macOS a Linux.' },
+      'de-DE': { title: APP_NAME + ' - Scratch-Projekte in HTML, EXE und mehr konvertieren', desc: 'Konvertiert Scratch 3, 2 oder 1 Projekte in HTML-Dateien, ZIP-Archive oder ausführbare Programme für Windows, macOS und Linux.' },
+      'es-ES': { title: APP_NAME + ' - Convierte proyectos de Scratch a HTML, EXE y más', desc: 'Convierte proyectos de Scratch 3, 2 o 1 en archivos HTML, archivos zip o programas ejecutables para Windows, macOS y Linux.' },
+      'fi-FI': { title: APP_NAME + ' - Muunna Scratch-projektit HTML-tiedostoiksi, EXE:ksi ja muuksi', desc: 'Muuntaa Scratch 3, 2 tai 1 projektit HTML-tiedostoiksi, ZIP-arkistoiksi tai ohjelmatiedostoiksi Windows, macOS ja Linuxille.' },
+      'fr-FR': { title: APP_NAME + ' - Convertir des projets Scratch en HTML, EXE et plus', desc: 'Convertit les projets Scratch 3, 2 ou 1 en fichiers HTML, archives zip ou programmes exécutables pour Windows, macOS et Linux.' },
+      'hu-HU': { title: APP_NAME + ' - Alakítsd Scratch projekteket HTML, EXE és egyebekké', desc: 'A Scratch 3, 2 vagy 1 projekteket HTML fájlokká, ZIP archívumokká vagy Windows, macOS és Linux futtatható programokká alakítja.' },
+      'it-IT': { title: APP_NAME + ' - Converti progetti Scratch in HTML, EXE e altro', desc: 'Converte progetti Scratch 3, 2 o 1 in file HTML, archivi zip o programmi eseguibili per Windows, macOS e Linux.' },
+      'ja-JP': { title: APP_NAME + ' - ScratchプロジェクトをHTML、EXEなどに変換', desc: 'Scratch 3、2、1のプロジェクトをHTMLファイル、ZIPアーカイブ、またはWindows、macOS、Linux用の実行可能プログラムに変換します。' },
+      'ko-KR': { title: APP_NAME + ' - Scratch 프로젝트를 HTML, EXE 등으로 변환', desc: 'Scratch 3, 2 또는 1 프로젝트를 HTML 파일, ZIP 아카이브 또는 Windows, macOS, Linux용 실행 가능한 프로그램으로 변환합니다.' },
+      'lt-LT': { title: APP_NAME + ' - Konvertuokite Scratch projektus į HTML, EXE ir daugiau', desc: 'Konvertuoja Scratch 3, 2 arba 1 projektus į HTML failus, ZIP archyvus arba vykdomas programas skirtas Windows, macOS ir Linux.' },
+      'nb-NO': { title: APP_NAME + ' - Konverter Scratch-prosjekter til HTML, EXE og mer', desc: 'Konverterer Scratch 3, 2 eller 1 prosjekter til HTML-filer, ZIP-arkiver eller kjørbare programmer for Windows, macOS og Linux.' },
+      'nl-NL': { title: APP_NAME + ' - Converteer Scratch-projecten naar HTML, EXE en meer', desc: 'Converteert Scratch 3, 2 of 1 projecten naar HTML-bestanden, ZIP-archieven of uitvoerbare programma\'s voor Windows, macOS en Linux.' },
+      'pl-PL': { title: APP_NAME + ' - Konwertuj projekty Scratch na HTML, EXE i więcej', desc: 'Konwertuje projekty Scratch 3, 2 lub 1 na pliki HTML, archiwa ZIP lub programy wykonalne dla Windows, macOS i Linux.' },
+      'pt-PT': { title: APP_NAME + ' - Converta projetos do Scratch em HTML, EXE e mais', desc: 'Converte projetos do Scratch 3, 2 ou 1 em arquivos HTML, arquivos zip ou programas executáveis para Windows, macOS e Linux.' },
+      'pt-BR': { title: APP_NAME + ' - Converta projetos do Scratch em HTML, EXE e mais', desc: 'Converte projetos do Scratch 3, 2 ou 1 em arquivos HTML, arquivos zip ou programas executáveis para Windows, macOS e Linux.' },
+      'ru-RU': { title: APP_NAME + ' - Конвертируйте проекты Scratch в HTML, EXE и не только', desc: 'Преобразует проекты Scratch 3, 2 или 1 в HTML-файлы, ZIP-архивы или исполняемые программы для Windows, macOS и Linux.' },
+      'sl-SI': { title: APP_NAME + ' - Pretvorite Scratch projekte v HTML, EXE in več', desc: 'Pretvori Scratch 3, 2 ali 1 projekte v HTML datoteke, ZIP arhive ali izvedljive programe za Windows, macOS in Linux.' },
+      'sv-SE': { title: APP_NAME + ' - Konvertera Scratch-projekt till HTML, EXE och mer', desc: 'Konverterar Scratch 3, 2 eller 1 projekt till HTML-filer, ZIP-arkiv eller körbara program för Windows, macOS och Linux.' },
+      'tr-TR': { title: APP_NAME + ' - Scratch projelerini HTML, EXE ve daha fazlasına dönüştür', desc: 'Scratch 3, 2 veya 1 projelerini HTML dosyaları, ZIP arşivleri veya Windows, macOS ve Linux için çalıştırılabilir programlara dönüştürür.' },
+      'uk-UA': { title: APP_NAME + ' - Конвертуйте проекти Scratch в HTML, EXE та інше', desc: 'Перетворює проекти Scratch 3, 2 або 1 у HTML-файли, ZIP-архіви або виконувані програми для Windows, macOS та Linux.' },
+      'zh-CN': { title: '虚舟实验室 ScratchPackager - 将Scratch项目转换为HTML、EXE等格式', desc: '将Scratch 3、2或1项目转换为HTML文件、ZIP压缩包或适用于Windows、macOS和Linux的可执行程序。比HTMLifier和forkphorus更快更易定制。' },
+      'zh-TW': { title: '虛舟實驗室 ScratchPackager - 將Scratch專案轉換為HTML、EXE等格式', desc: '將Scratch 3、2或1專案轉換為HTML檔案、ZIP壓縮檔或適用於Windows、macOS和Linux的可執行程式。' }
     }; %>
-    <% const currentSeo = seoTranslations[currentLocale] || seoTranslations['en']; %>
+    <% const currentSeo = seoTranslations[currentLocale] || seoTranslations['en-US']; %>
     <title><%= currentSeo.title %></title>
     <meta name="description" content="<%= currentSeo.desc %>">
     
@@ -80,32 +80,32 @@
   </head>
   <body>
     <% const noscriptTranslations = {
-      'en': 'This page requires JavaScript.',
-      'ca': 'Aquesta pàgina requereix JavaScript.',
-      'cs': 'Tato stránka vyžaduje JavaScript.',
-      'de': 'Diese Seite benötigt JavaScript.',
-      'es': 'Esta página requiere JavaScript.',
-      'fi': 'Tämä sivu vaatii JavaScriptin.',
-      'fr': 'Cette page nécessite JavaScript.',
-      'hu': 'Ez az oldal JavaScriptet igényel.',
-      'it': 'Questa pagina richiede JavaScript.',
-      'ja': 'このページにはJavaScriptが必要です。',
-      'ko': '이 페이지는 JavaScript가 필요합니다.',
-      'lt': 'Šiam puslapiui reikalingas JavaScript.',
-      'nb': 'Denne siden krever JavaScript.',
-      'nl': 'Deze pagina vereist JavaScript.',
-      'pl': 'Ta strona wymaga JavaScript.',
-      'pt': 'Esta página requer JavaScript.',
-      'pt-br': 'Esta página requer JavaScript.',
-      'ru': 'Эта страница требует JavaScript.',
-      'sl': 'Ta stran zahteva JavaScript.',
-      'sv': 'Denna sida kräver JavaScript.',
-      'tr': 'Bu sayfa JavaScript gerektirir.',
-      'uk': 'Ця сторінка потребує JavaScript.',
-      'zh-cn': '此页面需要JavaScript。',
-      'zh-tw': '此頁面需要JavaScript。'
+      'en-US': 'This page requires JavaScript.',
+      'ca-ES': 'Aquesta pàgina requereix JavaScript.',
+      'cs-CZ': 'Tato stránka vyžaduje JavaScript.',
+      'de-DE': 'Diese Seite benötigt JavaScript.',
+      'es-ES': 'Esta página requiere JavaScript.',
+      'fi-FI': 'Tämä sivu vaatii JavaScriptin.',
+      'fr-FR': 'Cette page nécessite JavaScript.',
+      'hu-HU': 'Ez az oldal JavaScriptet igényel.',
+      'it-IT': 'Questa pagina richiede JavaScript.',
+      'ja-JP': 'このページにはJavaScriptが必要です。',
+      'ko-KR': '이 페이지는 JavaScript가 필요합니다.',
+      'lt-LT': 'Šiam puslapiui reikalingas JavaScript.',
+      'nb-NO': 'Denne siden krever JavaScript.',
+      'nl-NL': 'Deze pagina vereist JavaScript.',
+      'pl-PL': 'Ta strona wymaga JavaScript.',
+      'pt-PT': 'Esta página requer JavaScript.',
+      'pt-BR': 'Esta página requer JavaScript.',
+      'ru-RU': 'Эта страница требует JavaScript.',
+      'sl-SI': 'Ta stran zahteva JavaScript.',
+      'sv-SE': 'Denna sida kräver JavaScript.',
+      'tr-TR': 'Bu sayfa JavaScript gerektirir.',
+      'uk-UA': 'Ця сторінка потребує JavaScript.',
+      'zh-CN': '此页面需要JavaScript。',
+      'zh-TW': '此頁面需要JavaScript。'
     }; %>
-    <noscript><%= noscriptTranslations[currentLocale] || noscriptTranslations['en'] %></noscript>
+    <noscript><%= noscriptTranslations[currentLocale] || noscriptTranslations['en-US'] %></noscript>
     <!-- This element needs to exist in the HTML for some browsers to autocomplete it. -->
     <input type="file" class="input-for-remembering-project-file" autocomplete="on">
     <div id="app"></div>
